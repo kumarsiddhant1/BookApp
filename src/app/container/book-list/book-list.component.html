@@ -1,0 +1,23 @@
+<div class="wrap">
+    <div class="box" *ngFor="let book of books">
+        <div class="box-top">
+            <img class="box-image"
+                [src]="book.Image_Link">
+            <div class="title-flex">
+                <h3 class="box-title">{{book.Title}}</h3>
+                <p class="user-follow-info">{{book.Category}}</p>
+            </div>
+            <div style="box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 20px;">
+                <p class="price-txt">$ {{book.Price}}</p>
+                <div *ngFor="let i of [].constructor(book.Stars);" style="display: inline-block;">
+                    <img class="star-image" src="../../../assets/image/star.png">
+                </div>
+            </div>
+            <div style="box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 10px;">
+                <p>{{book.Avilability}} pieces left</p>
+            </div>
+            
+        </div>
+        <a href="#" class="button">Buy Now</a>
+    </div>
+</div>
